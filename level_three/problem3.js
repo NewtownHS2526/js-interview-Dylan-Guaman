@@ -14,6 +14,11 @@ function easyProblem1(roomType, guestAge) {
     // If roomType is "Presidential" AND guestAge is 21, return "can access"
     // Otherwise return "go home"
 }
+    if (roomType === "Presidential" && guestAge === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 1 - Test 1:", easyProblem1("Presidential", 21)); // Should print: "can access"
@@ -29,6 +34,11 @@ function easyProblem2(roomType, guestAge) {
     // If guestAge is 21 AND roomType is NOT "Presidential", return "can sign in"
     // Otherwise return "go home"
 }
+    if (guestAge === 21 && roomType !== "Presidential") {
+        return "can sign in";
+    } else {      
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 2 - Test 1:", easyProblem2("Standard", 21)); // Should print: "can sign in"
@@ -47,6 +57,13 @@ function mediumProblem(roomType, guestAge) {
     // 2. Second check: guestAge === 21 && roomType !== "Presidential" → "can sign in"
     // 3. Everything else → "go home"
 }
+    if (roomType === "Presidential" && guestAge === 21) {
+        return "can access";
+    } else if (guestAge === 21 && roomType !== "Presidential") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Medium - Test 1:", mediumProblem("Presidential", 21)); // Should print: "can access"
@@ -72,6 +89,16 @@ function hardProblem(roomType, guestAge) {
     //     return "go home"
     // }
 }
+    if (guestAge === 21) {
+        if (roomType === "Presidential") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
+
 
 // Test your code:
 console.log("Hard - Test 1:", hardProblem("Presidential", 21)); // Should print: "can access"

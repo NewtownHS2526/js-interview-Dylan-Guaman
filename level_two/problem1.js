@@ -14,6 +14,11 @@ function easyProblem1(passType, age) {
     // If passType is "Platinum" AND age is 16, return "can access"
     // Otherwise, return "go home"
 }
+    if (passType === "Platinum" && age === 16) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 1 - Test 1:", easyProblem1("Platinum", 16)); // Should print: "can access"
@@ -29,6 +34,11 @@ function easyProblem2(passType, age) {
     // If age is 16 AND passType is NOT "Platinum", return "can sign in"
     // Otherwise, return "go home"
 }
+    if (age === 16 && passType !== "Platinum") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 2 - Test 1:", easyProblem2("Gold", 16)); // Should print: "can sign in"
@@ -46,6 +56,13 @@ function mediumProblem(passType, age) {
     // 2. age === 16 && passType !== "Platinum" → "can sign in"
     // 3. Everything else → "go home"
 }
+    if (passType === "Platinum" && age === 16) {
+        return "can access";
+    } else if (age === 16 && passType !== "Platinum") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Medium - Test 1:", mediumProblem("Platinum", 16)); // Should print: "can access"
@@ -66,6 +83,15 @@ function hardProblem(passType, age) {
     //   - If age is NOT 16 → return "go home"
     // Use nested if statements!
 }
+    if (age === 16) {
+        if (passType === "Platinum") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Hard - Test 1:", hardProblem("Platinum", 16)); // Should print: "can access"

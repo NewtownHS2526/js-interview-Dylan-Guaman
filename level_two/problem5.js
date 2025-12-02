@@ -14,6 +14,11 @@ function easyProblem1(customerType, age) {
     // If customerType is "Elite" AND age is 21, return "can access"
     // Otherwise return "go home"
 }
+    if (customerType === "Elite" && age === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 1 - Test 1:", easyProblem1("Elite", 21)); // Should print: "can access"
@@ -30,6 +35,11 @@ function easyProblem2(customerType, age) {
     // If age is 21 AND customerType is NOT "Elite", return "can sign in"
     // Otherwise return "go home"
 }
+    if (age === 21 && customerType !== "Elite") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 2 - Test 1:", easyProblem2("Standard", 21)); // Should print: "can sign in"
@@ -55,6 +65,13 @@ function mediumProblem(customerType, age) {
     //
     // Remember: Check customerType === "Elite" && age === 21 first!
 }
+    if (customerType === "Elite" && age === 21) {
+        return "can access";
+    }   else if (age === 21 && customerType !== "Elite") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Medium - Test 1:", mediumProblem("Elite", 21)); // Should print: "can access"
@@ -82,6 +99,15 @@ function hardProblem(customerType, age) {
     //
     // Why is this structure better? Think about it!
 }
+    if (age === 21) {
+        if (customerType === "Elite") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Hard - Test 1:", hardProblem("Elite", 21)); // Should print: "can access"

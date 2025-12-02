@@ -14,6 +14,11 @@ function easyProblem1(membershipClass, age) {
     // Use === to check if membershipClass equals "Diamond" AND age equals 21
     // Return "can access" if true, otherwise "go home"
 }
+    if (membershipClass === "Diamond" && age === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 1 - Test 1:", easyProblem1("Diamond", 21)); // Should print: "can access"
@@ -29,6 +34,11 @@ function easyProblem2(membershipClass, age) {
     // Check if age is 21 AND membershipClass is NOT "Diamond"
     // Return "can sign in" if true, otherwise "go home"
 }
+    if (age === 21 && membershipClass !== "Diamond") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 2 - Test 1:", easyProblem2("Gold", 21)); // Should print: "can sign in"
@@ -45,6 +55,13 @@ function mediumProblem(membershipClass, age) {
     // Make sure to check all three conditions correctly
     // Remember: && means BOTH conditions must be true
 }
+    if (membershipClass === "Diamond" && age === 21) {
+        return "can access";
+    }   else if (age === 21 && membershipClass !== "Diamond") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Medium - Test 1:", mediumProblem("Diamond", 21)); // Should print: "can access"
@@ -67,6 +84,15 @@ function hardProblem(membershipClass, age) {
     //     - Return "go home"
     // Use nested if-else statements!
 }
+    if (age === 21) {
+        if (membershipClass === "Diamond") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Hard - Test 1:", hardProblem("Diamond", 21)); // Should print: "can access"

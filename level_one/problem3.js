@@ -14,6 +14,12 @@ function easyProblem1(membershipLevel, age) {
     // If membershipLevel is "Gold" AND age is 21, return "can access"
     // Otherwise return "go home"
 }
+    if (membershipLevel === "Gold" && age === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
+
 
 // Test your code:
 console.log("Easy 1 - Test 1:", easyProblem1("Gold", 21)); // Should print: "can access"
@@ -29,6 +35,12 @@ function easyProblem2(membershipLevel, age) {
     // If age is 21 AND membershipLevel is NOT "Gold", return "can sign in"
     // Otherwise return "go home"
 }
+    if (age === 21 && membershipLevel !== "Gold") {
+        return "can sign in";
+    } else {      
+        return "go home";
+    }
+
 
 // Test your code:
 console.log("Easy 2 - Test 1:", easyProblem2("Silver", 21)); // Should print: "can sign in"
@@ -47,6 +59,13 @@ function mediumProblem(membershipLevel, age) {
     // 2. Second check: age === 21 && membershipLevel !== "Gold" → "can sign in"
     // 3. Everything else → "go home"
 }
+    if (membershipLevel === "Gold" && age === 21) {
+        return "can access";
+    } else if (age === 21 && membershipLevel !== "Gold") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Medium - Test 1:", mediumProblem("Gold", 21)); // Should print: "can access"
@@ -72,6 +91,16 @@ function hardProblem(membershipLevel, age) {
     //     return "go home"
     // }
 }
+    if (age === 21) {
+        if (membershipLevel === "Gold") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
+
 
 // Test your code:
 console.log("Hard - Test 1:", hardProblem("Gold", 21)); // Should print: "can access"

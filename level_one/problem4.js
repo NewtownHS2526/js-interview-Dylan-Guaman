@@ -14,6 +14,11 @@ function easyProblem1(playerRank, level) {
     // Check if playerRank is "Elite" AND level is 10
     // Return "can access" if both are true, otherwise "go home"
 }
+    if (playerRank === "Elite" && level === 10) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 1 - Test 1:", easyProblem1("Elite", 10)); // Should print: "can access"
@@ -30,6 +35,11 @@ function easyProblem2(playerRank, level) {
     // Check if level is 10 AND playerRank is NOT "Elite"
     // Return "can sign in" if true, otherwise "go home"
 }
+    if (level === 10 && playerRank !== "Elite") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 2 - Test 1:", easyProblem2("Pro", 10)); // Should print: "can sign in"
@@ -48,6 +58,13 @@ function mediumProblem(playerRank, level) {
     // 2. level === 10 && playerRank !== "Elite" → "can sign in"
     // 3. All other cases → "go home"
 }
+    if (playerRank === "Elite" && level === 10) {
+        return "can access";
+    } else if (level === 10 && playerRank !== "Elite") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Medium - Test 1:", mediumProblem("Elite", 10)); // Should print: "can access"
@@ -77,6 +94,16 @@ function hardProblem(playerRank, level) {
     //
     // Think: Why do we check level first? What happens if level is not 10?
 }
+    if (level === 10) {
+        if (playerRank === "Elite") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
+
 
 // Test your code:
 console.log("Hard - Test 1:", hardProblem("Elite", 10)); // Should print: "can access"

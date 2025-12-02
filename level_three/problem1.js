@@ -10,11 +10,16 @@
 // Task: Check if courseTier is "Master" and studentAge is 18
 // Hint: Use if statement with && operator
 function easyProblem1(courseTier, studentAge) {
+    
     // TODO: Write your code here
     // If courseTier is "Master" AND studentAge is 18, return "can access"
     // Otherwise, return "go home"
 }
-
+if(courseTier === "Master" && studentAge === 18) {
+    return "can access";
+} else {
+    return "go home";
+}
 // Test your code:
 console.log("Easy 1 - Test 1:", easyProblem1("Master", 18)); // Should print: "can access"
 console.log("Easy 1 - Test 2:", easyProblem1("Master", 17)); // Should print: "go home"
@@ -29,6 +34,11 @@ function easyProblem2(courseTier, studentAge) {
     // If studentAge is 18 AND courseTier is NOT "Master", return "can sign in"
     // Otherwise, return "go home"
 }
+    if (studentAge === 18 && courseTier !== "Master") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Easy 2 - Test 1:", easyProblem2("Beginner", 18)); // Should print: "can sign in"
@@ -46,6 +56,13 @@ function mediumProblem(courseTier, studentAge) {
     // 2. studentAge === 18 && courseTier !== "Master" → "can sign in"
     // 3. Everything else → "go home"
 }
+    if (courseTier === "Master" && studentAge === 18) {
+        return "can access";
+    } else if (studentAge === 18 && courseTier !== "Master") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 
 // Test your code:
 console.log("Medium - Test 1:", mediumProblem("Master", 18)); // Should print: "can access"
@@ -66,6 +83,16 @@ function hardProblem(courseTier, studentAge) {
     //   - If studentAge is NOT 18 → return "go home"
     // Use nested if statements!
 }
+    if (studentAge === 18) {
+        if (courseTier === "Master") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
+
 
 // Test your code:
 console.log("Hard - Test 1:", hardProblem("Master", 18)); // Should print: "can access"

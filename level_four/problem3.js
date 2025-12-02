@@ -10,6 +10,11 @@
 // Task: Write a simple if statement
 // Hint: Just check one condition at a time
 function easyProblem1(memberTier, age) {
+    if (memberTier === "Executive" && age === 18) {
+        return "can access";
+    } else {
+        return "go home";
+    }
     // TODO: Write your code here
     // If memberTier is "Executive" AND age is 18, return "can access"
     // Otherwise return "go home"
@@ -25,6 +30,11 @@ console.log("Easy 1 - Test 2:", easyProblem1("Standard", 18)); // Should print: 
 // Task: Use if-else to handle two cases
 // Hint: if handles one case, else handles the other
 function easyProblem2(memberTier, age) {
+    if (age === 18 && memberTier !== "Executive") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
     // TODO: Write your code here
     // If age is 18 AND memberTier is NOT "Executive", return "can sign in"
     // Otherwise return "go home"
@@ -41,6 +51,13 @@ console.log("Easy 2 - Test 3:", easyProblem2("Premium", 16)); // Should print: "
 // Task: Handle all three rules in one function
 // Hint: Use if, else if, and else
 function mediumProblem(memberTier, age) {
+    if (memberTier === "Executive" && age === 18) {
+        return "can access";
+    } else if (age === 18 && memberTier !== "Executive") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
     // TODO: Write your code here
     // Create a complete if-else if-else chain:
     // 1. First check: memberTier === "Executive" && age === 18 → "can access"
@@ -59,7 +76,13 @@ console.log("Medium - Test 4:", mediumProblem("VIP", 22)); // Should print: "go 
 // ============================================
 // Task: Use nested if statements with multiple levels
 // Hint: First check age, then check memberTier inside
-function hardProblem(memberTier, age) {
+function hardProblem(memberTier, age) 
+    if (age === 18) {
+        if (memberTier === "Executive") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
     // TODO: Write your code here
     // Structure your code like this:
     // if (age is 18) {
